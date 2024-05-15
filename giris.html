@@ -3,6 +3,9 @@
         <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
         <link rel="stylesheet" href="bootstrap-5.3.3-dist/js/bootstrap.js">
         <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Giriş Sayfası</title>
     </head>
 <header></header>
 <body>
@@ -25,7 +28,15 @@
             <a href="giris.html">Giriş</a>
         </li>
     </ul>
-
     </nav>
+    <div class="login-container">
+    <h2>Giriş Yap!</h2>
+    <form class="fr" action="login.php" method="POST">
+        <label for="username">Kullanıcı Adı :</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Şifre :</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        <input type="submit" value="Giriş Yap">
+    </form></div>
 </body>
     </html>
