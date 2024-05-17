@@ -20,7 +20,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 500px; /* İsteğe bağlı olarak formun genişliğini ayarlayabilirsiniz */
+    width: 500px; 
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -124,3 +124,21 @@ footer {
     }
     
 }
+.iletisim {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+input[type="text"], select, textarea {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    max-width: 200px;
+}
+
+textarea {
+    resize: vertical;
+}
+
