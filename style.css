@@ -66,15 +66,6 @@ footer {
     text-align: center;
     font-size: 0.8em;
 }
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
 
 .banner{
     height: 100vh;
@@ -141,4 +132,26 @@ input[type="text"], select, textarea {
 textarea {
     resize: vertical;
 }
+.hakkimda {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
+.resim{
+    width: 50%;
+    height: auto;
+    
+}
+.bolum{
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: auto;    border: 2px solid black;
+
+}
+.container-png{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid black;
+}
