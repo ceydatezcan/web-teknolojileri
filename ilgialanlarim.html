@@ -2,7 +2,9 @@
     <head>
         <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.css">
         <link rel="stylesheet" href="bootstrap-5.3.3-dist/js/bootstrap.js">
-        <link rel="stylesheet" href="style2.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="sl.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
 
@@ -26,10 +28,19 @@
                 <a class="nav-link"  href="giris.html">Giriş</a>
             </li>
             <li class="nav-item">
-            <a a class="nav-link" href="iletişim.html">İletişim</a>
+            <a class="nav-link" href="iletişim.html">İletişim</a>
         </li>
         </ul>
         </nav>
+        <h1 class="center">FİLMLER...</h1>
+    <div class="center">
+        <input type="text" id="searchInput" placeholder="Film adı..." autofocus>
+        <button onclick="searchMovies()">Ara</button>
+    </div>
+    <div id="movieResults" class="center"></div>
+
+   
+</body>
         
 </body>
     </html>

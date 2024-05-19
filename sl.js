@@ -29,6 +29,44 @@ function geri(){
     
     
     }
+   
   
-
+    function searchMovies() {
+        var searchInput = document.getElementById("searchInput").value;
+        var apiUrl = "http://www.omdbapi.com/?apikey=5d439c65&t=" + encodeURIComponent(searchInput);
+    
+        fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            displayMovieInfo(data);
+        })
+        .catch(error => console.log("Error:", error));
+    }
+    
+    function displayMovieInfo(movie) {
+        var movieResults = document.getElementById("movieResults");
+        movieResults.innerHTML = "";
+    
+        if (movie.Response === "True") {
+            var imdbRating = parseFloat(movie.imdbRating);
+            var director = movie.Director;
+    
+            var rating = imdbRating * 1;
+    
+            var movieDiv = document.createElement("div");
+            movieDiv.innerHTML = `
+                <h2>${movie.Title}</h2>
+                <p>Yönetmen: ${director}</p>
+                <p>IMDB Puanı: ${rating.toFixed(1)}</p>
+                <img src="${movie.Poster}" alt="${movie.Title}"/>
+            `;
+            movieResults.appendChild(movieDiv);
+        } else {
+            movieResults.innerHTML = "Film bulunamadı.";
+        }
+    }
+    
+    
+    
+    
     
